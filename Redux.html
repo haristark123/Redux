@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.1.0/redux.min.js" integrity="sha512-F21iSaHGX/3NFz5SuwoH6pGhTPxtoJoWWULqQVPQPtLm7nbK5r8vRSSSYy3Aj+H39cVrVm4+3ikGoVD1AjE0sQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./redux-store.js"></script>
+</body>
+</html>
+
+
+// Action Creators
+// //Person who submit the form
+// const newBooking= (name,amount)=>{
+//     return {
+//         type:'NEW_BOOKING',
+//         payload:{
+//             name,
+//             amount
+//         }
+//     }
+// }
+// const cancelBooking= (name,refundAmount)=>{
+//     return {
+//         type:'CANCEL_BOOKING',
+//         payload:{
+//             name,
+//             refundAmount
+//         }
+//     }
+// }
+// //Reducers
+// const reservationHistory=(oldReservationList=[],action)=>{
+//     if (action.type==='NEW_BOOKING'){
+//         return [...oldReservationList,action.payload]
+//     }
+//     else if (action.type==='CANCEL_BOOKING'){
+//         return oldReservationList.filter(record =>{
+//            return record.name!==action.payload.name
+//         })
+//     }
+//     return oldReservationList
+
+// }
+
+// const cancellationHistory=(oldCancellationList=[],action)=>{
+//    if (action.type==='CANCEL_BOOKING'){
+//        return [...oldCancellationList,action]
+//     }
+//     return oldCancellationList
+
+// }
+
+// const accounting=(totalMoney=100,action)=>{
+//     if (action.type==='NEW_BOOKING'){
+//         return totalMoney+action.payload.amount
+//     }
+//     if (action.type==='CANCEL_BOOKING'){
+//         return totalMoney-action.payload.refundAmount
+//      }
+//      return totalMoney
+ 
+//  }
+
+
+
+
+// // Redux Store
+// console.log(Redux);
+
+// const { createStore,combineReducers }=Redux
+
+// const railwayCentralStore=combineReducers({
+//     accounting:accounting,
+//     reservationHistory:reservationHistory,
+//     cancellationHistory:cancellationHistory
+// })
+
+
+// const store =createStore(railwayCentralStore)
+
+
+// const action=newBooking("Haari",2000)
+// store.dispatch(action)
+// store.dispatch(newBooking("kishann",1000))
+// store.dispatch(cancelBooking("kishann",1000))
+
+// console.log(store.getState());
